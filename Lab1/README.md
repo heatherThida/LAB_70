@@ -4,25 +4,27 @@
 
 1. Fix the program so that the object B has the intended string (“Hello World”).
 
-```C++
-/* HelloWorldExample.cpp */
-#include <iostream>
-#include <string>
-using namespace std;
-struct object {
-     string* s;
-};
-int main() {
-     object A, B;
-     A.s = new string;
-     *A.s = "Hello World"; // A has "Hello World"
-     B = A; // B has "Hello World"
-     *A.s = "Goodbye"; // A has "Goodbye"
-     cout << *A.s << endl;
-     cout << *B.s << endl;
-     return 0;
-}
-```
+	```C++
+	/* HelloWorldExample.cpp */
+	#include <iostream>
+	#include <string>
+
+	using namespace std;
+	struct object {
+		string* s;
+	};
+
+	int main() {
+		object A, B;
+     		A.s = new string;
+     		*A.s = "Hello World"; // A has "Hello World"
+     		B = A; // B has "Hello World"
+     		*A.s = "Goodbye"; // A has "Goodbye"
+     		cout << *A.s << endl;
+     		cout << *B.s << endl;
+     		return 0;
+	}
+	```
 
 2. What is wrong with the following program?
 
@@ -30,14 +32,16 @@ int main() {
 	/* ArrayExample.cpp */
 	#include <iostream>
 	using namespace std;
+	
 	int main() {
-     	int score[10];
-     	for (int i=1; i <= 10; ++i)
-    	{
-        	score[i]=3*i;
-           	cout << score[i];
-     	}
-	return 0;
+		int score[10];
+     		
+		for (int i=1; i <= 10; ++i)
+		{
+			score[i]=3*i;
+			cout << score[i];
+		}
+		return 0;
    
 	}
 	```
@@ -58,8 +62,8 @@ of a sphere given a radius.
 	int main() {
 		cout << "Program computes surface area and volume of a sphere.\n";
 		double  radius,				// radius of sphere
-        	 	  surfaceArea=0,		   // its surface area
-	 		volume=0;		        // its volume
+        	 double surfaceArea=0,		   	   // its surface area
+	 	double volume=0;		        // its volume
 	
   	
 		GetRadius(radius);
