@@ -1,5 +1,6 @@
 #COEN 70: Formal Specification and Advanced Data Structures
-##Winter 2015 ##Lab 1: Getting familiar with GNU debugger (gdb)
+##Winter 2015 
+##Lab 1: Getting familiar with GNU debugger (gdb)
 
 1. Fix the program so that the object B has the intended string (“Hello World”).
 
@@ -80,7 +81,10 @@ void ShowResults(double rad, double area, double vol)
 ##Steps to follow for all three programs: 
 
 1. Create the .cpp files
-2. Compile the programs using the -g switch, e.g. g++ -g <file>.cpp -o <file> 3. Invoke gdb. 4. Add to a report the steps you used to debug 5. Fix the problems
+2. Compile the programs using the -g switch, e.g. g++ -g <file>.cpp -o <file> 
+3. Invoke gdb.
+4. Add to a report the steps you used to debug
+5. Fix the problems
 
 ##Submission
-Create the fixed programs and the report and submit as one file using camino. Your username is the same as your Design Center username, and your password is the last seven digits of your ID.
+Create the fixed programs and the report and submit as one file using camino.
