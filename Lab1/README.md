@@ -26,56 +26,63 @@ int main() {
 
 2. What is wrong with the following program?
 
-```C++
-/* ArrayExample.cpp */
-#include <iostream>
-using namespace std;
-int main() {
-     int score[10];
-     for (int i=1; i <= 10; ++i)
-     {
-           score[i]=3*i;
-           cout << score[i];
-     }
-return 0;
+	```C++
+	/* ArrayExample.cpp */
+	#include <iostream>
+	using namespace std;
+	int main() {
+     	int score[10];
+     	for (int i=1; i <= 10; ++i)
+    	{
+        	score[i]=3*i;
+           	cout << score[i];
+     	}
+	return 0;
    
-}
-```
+	}
+	```
 
 3. Fix the next program so that it computes correctly the surface area and volume
 of a sphere given a radius.
 
-```C++
-/*SphereExample.cpp*/
-#include <iostream>
-using namespace std;
-const double PI = 3.14159265359;
-void GetRadius(double & radius);
-void ShowResults(double rad, double area, double vol);
-int main() {
-  cout << "Program computes surface area and volume of a sphere.\n";
-double  radius,
-        surfaceArea=0,
-volume=0;
-// radius of sphere
-  // its surface area
-  // its volume
-  GetRadius(radius);
-  volume = surfaceArea * radius / 3.0;
-  surfaceArea = 4.0 * PI * radius * radius;
-  ShowResults(radius, surfaceArea, volume);
-return 0; }
-void GetRadius(double& rad)
-{
-  cout << "Enter radius of sphere: ";
-cin >> rad; }
-void ShowResults(double rad, double area, double vol)
-{
-  cout << "Radius of sphere is " << rad << " inches\n";
-  cout << "Its surface area is " << area << "sq. inches\n"
-       << "Its volume is " << vol << " cubic inches.\n\n";
-}
-```
+	```C++
+	/*SphereExample.cpp*/
+	#include <iostream>
+	using namespace std;
+
+	const double PI = 3.14159265359;
+
+	void GetRadius(double & radius);
+	void ShowResults(double rad, double area, double vol);
+
+	int main() {
+		cout << "Program computes surface area and volume of a sphere.\n";
+		double  radius,				// radius of sphere
+        	 	  surfaceArea=0,		   // its surface area
+	 		volume=0;		        // its volume
+	
+  	
+		GetRadius(radius);
+		volume = surfaceArea * radius / 3.0;
+  		 surfaceArea = 4.0 * PI * radius * radius;
+  	
+		ShowResults(radius, surfaceArea, volume);
+		return 0; 
+	}
+	
+	void GetRadius(double& rad)
+	{
+		cout << "Enter radius of sphere: ";
+		cin >> rad; 
+	}
+
+	void ShowResults(double rad, double area, double vol)
+	{
+		cout << "Radius of sphere is " << rad << " inches\n";
+  		 cout << "Its surface area is " << area << "sq. inches\n"
+      	              << "Its volume is " << vol << " cubic inches.\n\n";
+	}
+	```
 
 
 ##Steps to follow for all three programs: 
