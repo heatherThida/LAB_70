@@ -1,0 +1,14 @@
+COEN 70 Lab #1 Report
+Robert Bayer
+rbayer@scu.edu
+Tuesday 9:15 // Patrick Neill
+
+
+Problem 1:
+To find the problem in the first problem, I ran the file in gdb with a break on line 13. I used the "next" command to step through each line and used "print A", "print B", "print *A.s" and "print *B.s" at different lines. I found that after line 16, where B was supposed to have the value of A, B did not have the value of A and did not have any memory allocated. This was seen through "print B" giving 0x0, which shows no memory is allocated. I fixed this by allocating memory using the line "B.s = new string;" and fixing the assignment types by changing "B = A" to "*B.s = *A.s"
+
+Problem 2:
+To find this problem, I ran the file in gdb with a break on line 6. I used the "next" command to step through each iteration of the loop, and checked the value of i using "print i" after each iteration. I found that the loop was running when i = 10, which didn't make sense because the array was only of size 10. I fixed the loop to start at i=0 and run while i <= 9. I could have also changed it to i < 10.
+
+Problem 3:
+To find this problem, I ran the file in gdb with a break on line 14. Then, I stepped through the program and printed the values of the different variables (radius, surfaceArea, and volume). I realized that the surfaceArea was 0 when the volume was being calculated because the volume calculation relied on the surfaceArea calculation, but the surfaceArea came after the volume. I fixed this by placing the surfaceArea calculation before the volume calculation.
