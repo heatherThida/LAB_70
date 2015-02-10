@@ -50,6 +50,8 @@ class List{
 
 class OrderedList: public List {
 	public:
+		OrderedList();
+		~OrderedList();
 		//re-implement the replace and insert function
 		void replace(int, int);
 		void insert(const int&);
@@ -77,6 +79,9 @@ List::~List(){
 		delete[] temp;
 	}
 }
+
+OrderedList::OrderedList():List(){}
+OrderedList::~OrderedList(){}
 
 //Assignment operator
 const List& List::operator=(const List& other){
