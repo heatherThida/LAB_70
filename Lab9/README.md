@@ -32,15 +32,15 @@ parent node. If the aunt node does not exist, then return null.
 around the node parameter. See next figure that demonstrates the two rotations [Image Not Included]
 - `fixTree(RBNode* current)` recursive function: recursively traverse the tree to make it a Red Black tree. Here is a description of all the cases for the current pointer:
 
-	1) current is the root node. Make it black and quit.
-	2) Parent is black. Quit, the tree is a Red Black Tree.
-	3) The current node is red and the parent node is red. The tree is unbalanced and you will have to modify it in the following way.
-		I. If the aunt node is empty or black, then there are four sub cases that you have to process.
-			A) grandparent –parent(is left child)— current (is right child) case. Solution: rotate the parent left and then continue recursively fixing the tree starting with the original parent.
-			B) grandparent –parent (is right child)— current (is left child) case. Solution: rotate the parent right and then continue recursively fixing the tree starting with the original parent.
-			C) grandparent –parent (is left child)— current (is left child) case. Solution: make the parent black, make the grandparent red, rotate the grandparent to the right and quit, tree is balanced.
-			D) grandparent –parent (is right child)— current (is right child) case. Solution: make the parent black, make the grandparent red, rotate the grandparent to the left, quit tree is balanced.
-		II. Else if the aunt is red, then make the parent black. make the
+1. current is the root node. Make it black and quit.
+2. Parent is black. Quit, the tree is a Red Black Tree.
+3. The current node is red and the parent node is red. The tree is unbalanced and you will have to modify it in the following way.
+	1. If the aunt node is empty or black, then there are four sub cases that you have to process.
+		1. grandparent –parent(is left child)— current (is right child) case. Solution: rotate the parent left and then continue recursively fixing the tree starting with the original parent.
+		2. grandparent –parent (is right child)— current (is left child) case. Solution: rotate the parent right and then continue recursively fixing the tree starting with the original parent.
+		3. grandparent –parent (is left child)— current (is left child) case. Solution: make the parent black, make the grandparent red, rotate the grandparent to the right and quit, tree is balanced.
+		4. grandparent –parent (is right child)— current (is right child) case. Solution: make the parent black, make the grandparent red, rotate the grandparent to the left, quit tree is balanced.
+	2. Else if the aunt is red, then make the parent black. make the
 aunt black, make the grandparent red and continue recursively fix up the tree starting with the grandparent.
 
 
