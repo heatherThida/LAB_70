@@ -215,7 +215,7 @@ void RBTree::addNode(int value){
     
 }
 
-//fix the tree by changing colors and rebalancing (taken from lab pseudocode)
+//fix the tree by changing colors and rebalancing
 void RBTree::fixTree(RBNode<int>* r){
     RBNode<int>* y;
     
